@@ -27,26 +27,31 @@
         if (document.getElementById("numberValue").value.startsWith("SGEA")) {
           document.getElementById("checkTest").value =
             "+441332280841,3186,," +
-            document.getElementById("numberValue").value +
+            document.getElementById("numberValue").value.substring(4) +
             "#,1,1";
           document.getElementById("checkTone").value =
             "+441332280841,3185,," +
-            document.getElementById("numberValue").value +
+            document.getElementById("numberValue").value.substring(4) +
             "#,1,2,1";
         } else if (
           document.getElementById("numberValue").value.startsWith("OGEA")
         ) {
           document.getElementById("checkTest").value =
             "+441332280841,3181,," +
-            document.getElementById("numberValue").value +
+            document.getElementById("numberValue").value.substring(4) +
             "#,1,1";
           document.getElementById("checkTone").value =
             "+441332280841,3185,," +
-            document.getElementById("numberValue").value +
+            document.getElementById("numberValue").value.substring(4) +
             "#,1,1,1";
         } else if (
           document.getElementById("numberValue").value.startsWith("0")
         ) {
+          document.getElementById("checkTest").value =
+            "+441332280841,311,," +
+            document.getElementById("numberValue").value +
+            "#,1,1";
+
           document.getElementById("checkTone").value =
             "+441332280841,314,," +
             document.getElementById("numberValue").value +
