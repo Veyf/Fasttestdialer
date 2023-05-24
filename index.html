@@ -58,6 +58,13 @@
             "#,1,1";
         }
         return;
+
+        function pastedump() {
+          const paste = document.getElementById("numberValue");
+          navigator.clipboard
+            .readText()
+            .then((clipText) => (paste.innerText = clipText));
+        }
       }
     </script>
   </head>
@@ -69,7 +76,8 @@
       </div>
       <form onsubmit="return validateMyForm();">
         <div class="row">
-          <label for="poleYear">Number:</label>
+          <label for="numberValue">Number:</label>
+          <button onclick="pastedump()">Paste</button>
           <input
             type="string"
             id="numberValue"
