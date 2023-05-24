@@ -59,12 +59,12 @@
         }
         return;
 
-        function pastedump() {
-          const paste = document.getElementById("numberValue");
-          navigator.clipboard
-            .readText()
-            .then((clipText) => (paste.innerText = clipText));
-        }
+        var pasteButton = document.getElementById("paste");
+        pasteButton.addEventListener("click", function () {
+          navigator.clipboard.readText().then(function (text) {
+            document.getElementById("numberValue").value = text;
+          });
+        });
       }
     </script>
   </head>
@@ -77,7 +77,7 @@
       <form onsubmit="return validateMyForm();">
         <div class="row">
           <label for="numberValue">Number:</label>
-          <button onclick="pastedump()">Paste</button>
+          <button id="paste" onclick="pastedump()">Paste</button>
           <input
             type="string"
             id="numberValue"
