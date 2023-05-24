@@ -56,6 +56,11 @@
             "+441332280841,314,," +
             document.getElementById("numberValue").value +
             "#,1,1";
+
+          document.getElementById("spanTone").innerHTML =
+            '<a href="tel:+441332280841,314,,' +
+            document.getElementById("numberValue").value +
+            '#,1,1">Tap for Tone</a>';
         }
         return;
 
@@ -96,6 +101,10 @@
         <div class="row">
           <label for="checkTone">Tone:</label>
           <textarea disabled id="checkTone"></textarea>
+        </div>
+        <div class="row">
+          <label for="checkTone">Tone:</label>
+          <span id="spanTone"></span>
         </div>
       </form>
     </div>
