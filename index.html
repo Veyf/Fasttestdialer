@@ -56,7 +56,7 @@
               EIN +
               "%23,11," +
               document.getElementById("numberValue").value +
-              '%23,2">EIN SET DO ECLIPSE</a></button>';
+              '%23,,2">Tap for Eclipse Test</a></button>';
           } else {
             document.getElementById("spanTest").innerHTML =
               '<button type="button" class="btn btn-primary"><a href="tel:+441332280841,311,,' +
@@ -71,8 +71,7 @@
         } else {
           document.getElementById("spanTest").innerHTML =
             '<button type="button" class="btn btn-danger">No valid OGEA/SGEA/DN detected</button>';
-          document.getElementById("spanTone").innerHTML =
-            '<button type="button" class="btn btn-danger">No valid OGEA/SGEA/DN detected</button>';
+          document.getElementById("spanTone").innerHTML = "";
         }
         return;
 
@@ -135,11 +134,9 @@
             />
           </div>
           <div class="row">
-            <label for="spanTest">Test:</label>
             <span id="spanTest"></span>
           </div>
           <div class="row">
-            <label for="spanTone">Tone:</label>
             <span id="spanTone"></span>
           </div>
         </form>
@@ -150,8 +147,10 @@
             class="row page-footer"
             style="margin-bottom: 0px; margin-top: auto"
           >
-            <label for="userEIN">EIN:</label>
-            <input id="userEIN" />
+            <span
+              ><label for="userEIN">EIN:</label>
+              <input id="userEIN" type="number"
+            /></span>
           </div>
           <div>
             Disclaimer: Untested and intended purely for personal usage. &copy;
